@@ -1,0 +1,31 @@
+{
+  "name": "smart-home-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker:build": "docker build -t arcade-control-api .",
+    "docker:run": "docker run -p 3000:3000 --rm --network host arcade-control-api",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts",
+    "setup:create-user": "scripty"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.9",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-hue-api": "^4.0.9",
+    "wemo-client": "^0.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.19",
+    "nodemon": "^2.0.6",
+    "scripty": "^2.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

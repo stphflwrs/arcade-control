@@ -1,0 +1,11 @@
+.app {
+  //background: #57467B;
+  background: #F2F2F2;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.app-panels {
+  flex: 1;
+}

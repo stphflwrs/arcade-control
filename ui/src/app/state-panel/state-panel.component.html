@@ -1,0 +1,8 @@
+<div class="state-panel">
+  <div class="state-panel--label">
+    {{label}}
+  </div>
+  <div class="state-panel--controls">
+      <ng-container [ngTemplateOutlet]="controlRef" [ngTemplateOutletContext]="{ state: state, changeState: changeState }"></ng-container>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="control--wrapper">
+  <div
+    [class.on]="state.power === PowerState.On"
+    [class.off]="state.power === PowerState.Off"
+    [class.unavailable]="state.power === PowerState.Unavailable"
+    [class.disabled]="disabled"
+    (click)="clickPowerButton()"
+    class="control"
+  >
+    <div class="control--icon">
+      <fa-icon [icon]="faPowerOff" size="3x"></fa-icon>
+
+    </div>
+  </div>
+</div>

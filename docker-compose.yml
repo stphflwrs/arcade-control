@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: api
+      dockerfile: Dockerfile
+    environment:
+      HUE_BRIDGE_USER: ${HUE_BRIDGE_USER?}
+      HUE_BRIDGE_CLIENT_KEY: ${HUE_BRIDGE_CLIENT_KEY?}
+    ports:
+    - 3000:3000
+
+  ui:
+    build:
+      context: ui
+      dockerfile: Dockerfile
+    ports:
+    - 4200:4200

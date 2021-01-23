@@ -1,0 +1,25 @@
+<div *requireAsync="arcadeStateService.arcadeState; let data" class="arcade-state">
+  <h2 class="arcade-state--heading">Games</h2>
+  <cafe-pause-arcade-state-panel [state]="data[Game.AstroCity]" [stateEntry]="Game.AstroCity">
+    <ng-template #controls let-state="state" let-changeState="changeState">
+      <cafe-pause-arcade-power-state-control [state]="state" (changeState)="changeState($event)"></cafe-pause-arcade-power-state-control>
+    </ng-template>
+  </cafe-pause-arcade-state-panel>
+
+  <div style="height: 10px;"></div>
+<!--  <div style="border-top: 1px solid black"></div>-->
+
+  <cafe-pause-arcade-state-panel [state]="data[Game.Museca]" [stateEntry]="Game.Museca">
+    <ng-template #controls let-state="state" let-changeState="changeState">
+      <cafe-pause-arcade-power-state-control [state]="state" (changeState)="changeState($event)"></cafe-pause-arcade-power-state-control>
+    </ng-template>
+  </cafe-pause-arcade-state-panel>
+
+  <h2 class="arcade-state--heading">Lights</h2>
+  <cafe-pause-arcade-state-panel [state]="data[Light.Ambiance]" [stateEntry]="Light.Ambiance">
+    <ng-template #controls let-state="state" let-changeState="changeState">
+<!--      <cafe-pause-arcade-brightness-control [state]="state" (changeState)="changeState($event)"></cafe-pause-arcade-brightness-control>-->
+      <cafe-pause-arcade-power-state-control [state]="state" (changeState)="changeState($event)"></cafe-pause-arcade-power-state-control>
+    </ng-template>
+  </cafe-pause-arcade-state-panel>
+</div>

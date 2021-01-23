@@ -1,0 +1,21 @@
+<div *ngIf="showSlider" class="slider--wrapper">
+  <div (click)="onClickSliderBg($event)" class="slider">
+    <div class="slider--bg">
+    </div>
+    <div class="slider--marker" (drag)="onDragSliderMarker($event)" [ngStyle]="sliderMarkerStyle"></div>
+  </div>
+  <div class="control--wrapper">
+    <div (click)="toggleSlider()" class="control">
+      <div class="control--icon">
+        <fa-icon [icon]="faTimes" [fixedWidth]="true" size="3x"></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="control--wrapper">
+  <div (click)="toggleSlider()" class="control">
+    <div class="control--icon">
+      <fa-icon [icon]="faSun" size="3x"></fa-icon>
+    </div>
+  </div>
+</div>

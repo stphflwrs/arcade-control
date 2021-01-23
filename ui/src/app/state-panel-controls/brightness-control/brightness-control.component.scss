@@ -1,0 +1,37 @@
+.slider--wrapper {
+  background: lightgray;
+  display: flex;
+  //align-items: ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  .slider {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+
+    .slider--bg {
+      background: black;
+      height: 8px;
+      flex: 1;
+    }
+
+    .slider--marker {
+      position: absolute;
+      background: red;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+    }
+  }
+
+  .control--wrapper {
+    justify-self: flex-end;
+  }
+}

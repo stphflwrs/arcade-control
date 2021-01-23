@@ -1,0 +1,19 @@
+.control {
+  &.on {
+    .control--icon {
+      color: green;
+    }
+  }
+
+  &.off {
+    .control--icon {
+      color: red;
+    }
+  }
+
+  &.unavailable {
+    .control--icon {
+      color: lightgrey;
+    }
+  }
+}
